@@ -6,6 +6,14 @@ function sortear(){
     let numeroMinimo = parseInt(document.getElementById('de').value);
     let numeroMaximo = parseInt(document.getElementById('ate').value);
     
+    //Verificando se o número mínimo é menor que o máximo
+    if(numeroMinimo > numeroMaximo){
+        limparCampo('de');
+        limparCampo('ate');
+
+        alert('O número mínimo deve ser menor que o número máximo')
+    }
+
     for(let i = 0; i < quantidadeDeNumeros; i++){
         numAleatorio = parseInt(gerarNumeroAleatorio(numeroMinimo, numeroMaximo));
 
