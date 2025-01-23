@@ -12,6 +12,10 @@ function sortear(){
         limparCampo('ate');
 
         alert('O número mínimo deve ser menor que o número máximo')
+    }else if(quantidadeDeNumeros > (numeroMaximo - numeroMinimo)){
+        limparCampo('quantidade');
+
+        alert('A quantidade de números a serem sorteados deve ser menor que o intervalo de números para sorteio');
     }
 
     for(let i = 0; i < quantidadeDeNumeros; i++){
